@@ -18,13 +18,46 @@
             animation-duration: 2s;
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
+            animation-timing-function:ease-out;
+            /* animation-delay: 2s; */
+            /* animation-direction: reverse; */
+        }
+        .box2{
+            background-color: aqua;
+            height: 250px;
+            width: 250px;
+            position: relative;
+            animation-name: second-animation;
+            animation-duration: 8s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
+            animation-direction: reverse;
         }
         @keyframes first-animation {
             from{
-                width: 200px;
+                width: 20px;
             }
             to{
                 width: 909px;
+            }
+        }
+        @keyframes second-animation {
+            0%{
+                top: 0px;
+                left: 0px;
+            }
+            25%{
+                top: 250px;
+                left: 0px;
+            }
+            75%{
+                top: 250px;
+                left: 250px;
+            }
+            100%{
+                top: 0px;
+                left: 250px;
             }
         }
     </style>
@@ -32,7 +65,10 @@
 <body>
     <div class="container">
         <div class="box">
-            This is header
+            First Anumaton
+        </div>
+        <div class="box2">
+            Second animation
         </div>
     </div>
 </body>
